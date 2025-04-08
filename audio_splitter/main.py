@@ -81,7 +81,7 @@ def main():
     parser.add_argument("output_dir", help="Path to the output directory where chunks will be saved.")
     parser.add_argument("--chunk_length", type=int, default=300000, help="Length of each chunk in milliseconds (default: 300000 ms / 5 minutes).")
     parser.add_argument("--output_format", type=str, default="wav", help="Output format for the audio chunks (default: wav). Supported formats include wav, mp3, and ogg.")
-    parser.add_argument("--silence_based", action="store_true", help="Split the audio based on silence instead of fixed-size chunks. If set, --chunk_length is ignored.")
+    parser.add_argument("--silence_based", action="store_true", help="Split the audio based on silence instead of fixed-size chunks. If set, --chunk_length is a minimal length of each chunk in milliseconds.")
 
     # Parse the arguments
     args = parser.parse_args()
